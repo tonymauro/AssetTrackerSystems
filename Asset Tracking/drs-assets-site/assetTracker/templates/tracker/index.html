@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Tracker{% endblock %}</h1>
+{% endblock %}
+
+{% block subheader %}
+{% endblock %}
+
+{% block content %}
+  <p> 
+  Displaying all assets: 
+  </p>
+  {% for asset in assetList %}
+      <article class= "post">
+        <header>
+          <div>
+              <!-- Not actually sure if the thing below works or needs to be changed to asset[3] or something-->
+            <h1>Name: "{{ asset[3] }}"</h1>
+            <h3>
+                Current Area Id: {{ asset[4] }}, Current Area Name: *NOT IMPLEMENTED*
+            </h3>
+            <h3>
+                Id: {{asset[0]}}, 
+                Tag Id: {{asset[1]}},
+                Tag True Id: {{asset[2]}}
+            </h3>
+            <div class="about">
+            </div>
+          </div>
+        </header>
+        <p class="body">Description: " {{ asset[6] }} " </p>
+      </article>
+  {% endfor %}
+  
+{% endblock %}
