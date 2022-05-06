@@ -2,7 +2,7 @@
 This to be further updated. 
 This project uses Flask and SQLAlchemy to attempt to create the website and server side portions of the Asset Tracker System.
 
-There are code comments litter about the code that give insight, some older than others.
+There are code comments litter about the code that give insight, some older than others. The code comments in drs-asset-tracking are more current, and contain plans and instructions on ideas of how best to go about things I haven't done yet. 
 
 The folder within that folder that contains files that will be directly used in the final project is the drs-asset-tracking one, which is a flask app that is working towards being the website DRS asked for. The folder assetTracker within it is where all the code is store pretty much, the other directories are more for website operation, except for Tests, which is for tests. Not that I've used it for tests because I skipped that part of the tutorial. 
 
@@ -21,3 +21,4 @@ This is the tutorial directly for alchemy. They also have incredibly detailed do
 
 https://flask.palletsprojects.com/en/2.1.x/patterns/sqlalchemy/ 
 In addition, this final bit of documentation on how to integrate alchemy and flask is very important. I used the stuff under "Declarative" 
+
