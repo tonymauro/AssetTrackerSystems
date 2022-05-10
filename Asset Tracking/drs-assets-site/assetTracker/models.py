@@ -54,3 +54,12 @@ class Area(Base):
     
     def __repr__(self):
         return f"Area(id={self.id!r}, name={self.name!r})"
+    
+class StringTest(Base):
+    __tablename__= 'stringTest'
+    
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    
+    def __repr__(self):
+        return f"StringTest(id={self.id!r}, name={self.name!r})"

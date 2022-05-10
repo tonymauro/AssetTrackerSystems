@@ -10,10 +10,15 @@
 
 {% block content %}
   <p> 
-  What's up my guy?
+  Test Content Below: 
   </p>
-  <p>
-  This is just a test page, appreciate you showing up though.
-  </p>
+  {% for stringName in stringList %}
+      <article class= "post">
+      <header>
+      {{stringName[1]}}
+      </header>
+      </article>
+  
+  {% endfor %}
   
 {% endblock %}

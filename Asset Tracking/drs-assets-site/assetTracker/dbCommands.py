@@ -1,8 +1,8 @@
 from sqlalchemy import Table, Column, Integer, String, ForeignKey, Index
-from sqlalchemy import select, insert, subquery, update
+from sqlalchemy import select, insert, subquery, update, delete
 from assetTracker.database import Base
 from assetTracker import models
-from assetTracker.models import Asset, Reader, Area
+from assetTracker.models import Asset, Reader, Area, StringTest
 from sqlalchemy.orm import Session
 
 
@@ -99,8 +99,6 @@ def returnAreas():
     return stmt
 
 
-
-
 #These below this are imported functions from databasev1TESTPERMA and probably don't work and might even stop the
 #whole program from working
 
@@ -145,3 +143,25 @@ def addAsset(assetName, currentArea, impSession):
     with impSession() as conn:
         conn.execute(insert(Asset).values(name= assetName, current_area= currentArea))
         conn.commit()
+        
+
+        
+def returnStringTest():
+    stmt = select(StringTest.id, StringTest.name)
+    return stmt
+
+def addStringTest(stringName, impSession):
+    with impSession() as conn:
+        conn.execute(insert(StringTest).values(name= stringName))
+        conn.commit()
+
+def clearStringTest(impSession):
+    with impSession() as conn:
+        conn.execute(delete(StringTest))
+        conn.commit()
+
+
+
+
+
+
